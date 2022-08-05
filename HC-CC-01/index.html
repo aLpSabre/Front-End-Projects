@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <div id="description">
+          <h1>Clarusway Survey Form</h1>
+          <p>Thank you for taking the time to help us improve the platform</p>
+        </div>
+      </div>
+    </div>
+    <form action="result.html" method="get">
+      <div class="box">
+        <label for="fname">Name:</label>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <div class="box">
+        <label for="sname">Surname:</label>
+        <input
+          type="text"
+          name="sname"
+          id="sname"
+          placeholder="Enter your Surname"
+        />
+      </div>
+
+      <div class="box">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="user@clarusway.com"
+        />
+      </div>
+
+      <p>Which option best describes your current role?</p>
+      <div class="buttons">
+        <div>
+          <input type="radio" name="role" id="yes" value="yes" />
+          <label for="yes">Definitely, Yes</label>
+        </div>
+        <div>
+          <input type="radio" name="role" id="maybe" value="maybe"/>
+          <label for="maybe">Maybe</label>
+        </div>
+        <div>
+          <input type="radio" name="role" id="not_sure" value="not_sure""/>
+          <label for="not_sure">Not sure</label>
+        </div>
+        <div>
+          <input type="radio" name="role" id="no" value="no" />
+          <label for="no">Definitely, No</label>
+        </div>
+      </div>
+      <p>What is your favorite feature of Clarusway?</p>
+      <div class="box">
+        <select name="feature" id="feature">
+          <option value="" selected disabled>Select an option</option>
+          <option value="Courses">Courses</option>
+          <option value="Projects">Projects</option>
+          <option value="Community">Community</option>
+          <option value="Mentors">Mentors</option>
+        </select>
+      </div>
+
+      <p>What would you like to see improved? (Check all that apply)</p>
+
+      <div class="buttons">
+        <div>
+          <input type="checkbox" name="Checkbox1" id="front" value="front" />
+          <label for="front">Front-end Projects</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="Checkbox2"
+            id="backend"
+            value="backend"
+          />
+          <label for="backend">Back-end Projects </label>
+        </div>
+        <div>
+          <input type="checkbox" name="Checkbox3" id="data" value="data" />
+          <label for="data">Data Science</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="Checkbox4"
+            id="additional"
+            value="additional"
+          />
+          <label for="additional">Additional Courses</label>
+        </div>
+      </div>
+
+      <p>Any comments or suggestions?</p>
+      <textarea
+        name="text"
+        id="text"
+        placeholder="Enter your comment here...Thanks for your comments"
+      ></textarea>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
