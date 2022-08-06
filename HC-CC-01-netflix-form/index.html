@@ -46,23 +46,32 @@
           placeholder="user@clarusway.com"
         />
       </div>
-
       <p>Which option best describes your current role?</p>
+      <div class="box">
+        <select name="roles" id="roles">
+          <option value="" selected disabled>Select an option</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Student">Student</option>
+          <option value="Full-time Job">Full-time Job</option>
+          <option value="Part-time Job">Part-time Jo</option>
+        </select>
+      </div>
+      <p>Would you recommend Clarusway to a friend?</p>
       <div class="buttons">
         <div>
-          <input type="radio" name="role" id="yes" value="yes" />
+          <input type="radio" name="recommend" id="yes" value="yes" />
           <label for="yes">Definitely, Yes</label>
         </div>
         <div>
-          <input type="radio" name="role" id="maybe" value="maybe"/>
+          <input type="radio" name="recommend" id="maybe" value="maybe"/>
           <label for="maybe">Maybe</label>
         </div>
         <div>
-          <input type="radio" name="role" id="not_sure" value="not_sure""/>
+          <input type="radio" name="recommend" id="not_sure" value="not_sure""/>
           <label for="not_sure">Not sure</label>
         </div>
         <div>
-          <input type="radio" name="role" id="no" value="no" />
+          <input type="radio" name="recommend" id="no" value="no" />
           <label for="no">Definitely, No</label>
         </div>
       </div>
