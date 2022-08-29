@@ -21,7 +21,7 @@ body {
   align-items: center;
   background-color: black;
   min-width: 33%;
-  max-width: 99%;
+  max-width: 95%;
   height: 95vh;
   padding: 1%;
   border-radius: 30px;
@@ -61,7 +61,7 @@ body {
   background: #f1a33c;
 }
 
-@media (max-width:1000px) {
+@media (max-width:600px) {
  .container{
   width: 95%;
  }
