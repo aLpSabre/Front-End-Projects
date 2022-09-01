@@ -7,10 +7,9 @@
   font-family: "CustomFont";
   src: url("./Montserrat-Regular.ttf");
 }
-
 body {
   font-family: CustomFont;
-  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +17,6 @@ body {
   align-items: center;
 }
 h1 {
-  text-align: center;
   margin-top: 10px;
 }
 h2{
@@ -29,14 +27,13 @@ h2{
   max-width: 80%;
   min-height: 80vh;
   margin: 30px auto;
-
 }
 form {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   justify-content: space-evenly;
   align-items:flex-start;
-  gap: 2rem;
+  gap: 3rem;
 }
 img {
   width: 100px;
@@ -60,7 +57,6 @@ input {
   width: 100%;
   outline: none;
 }
-
 label {
   font-size: 12px;
 }
@@ -87,7 +83,6 @@ label {
   justify-content: space-between;
   gap:0.5rem;
 }
-
 .select {
   display: flex;
   padding: 0.4rem;
@@ -171,6 +166,6 @@ select {
   form {
     align-items:center;
     flex-direction: column-reverse;
-    gap:2rem;
+    gap:3rem;
   }
 }
