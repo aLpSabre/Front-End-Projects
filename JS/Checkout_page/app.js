@@ -48,8 +48,8 @@ plus1.addEventListener("click", function () {
 
 minus0.addEventListener("click", function () {
   
-  /*  */console.log(backNum !== 0 || total.value.slice(1) ==73.99);
-  if (backNum !== 0 || total.value.slice(1) ==73.99) {
+ 
+  if (backNum !== 0) {
     if (total.value.slice(1) ==73.99){
       backNum -= 1
       backpack.value = backNum;
@@ -66,7 +66,7 @@ minus0.addEventListener("click", function () {
 })
 
 minus1.addEventListener("click", function () {
-  if (shoeNum !== 0 || total.value.slice(1) ==93.99) {
+  if (shoeNum !== 0) {
     if(total.value.slice(1) ==93.99){
       shoeNum -= 1
       shoe.value = shoeNum;
