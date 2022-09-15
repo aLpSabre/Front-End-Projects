@@ -11,72 +11,48 @@ const plus1 = document.querySelector(".plus1");
 const total = document.querySelector(".total-input");
 
 //* Variables
-let shoeNum = 0;
-let backNum = 0;
+
+const values={backNum:0,shoeNum:0};
 let totalNum = 0;
 
-shoe.value = shoeNum;
-backpack.value = backNum;
+shoe.value = values.shoeNum;
+backpack.value = values.backNum;
 total.value = `$${totalNum}`;
 
-//! Application
 
-plus0.addEventListener("click", function () {
-  backNum += 1
-  backpack.value = backNum;
+//! Application 
+
+function increment(num,product,price) {
+  values[num]+=1;
+  product.value =  values[num];
   if (total.value.slice(1) == 0) {
-    totalNum += 54.99 + 19;
+    totalNum += price + 19;
     total.value = `$${totalNum.toFixed(2)}`;
   } else {
-    totalNum += 54.99;
+    totalNum += price;
     total.value = `$${totalNum.toFixed(2)}`;
   }
-}) 
+}
 
-
-plus1.addEventListener("click", function () {
-  shoeNum += 1
-  shoe.value = shoeNum;
-  if (total.value.slice(1) == 0) {
-    totalNum += 74.99 + 19;
-    total.value = `$${totalNum.toFixed(2)}`;
-  } else {
-    totalNum += 74.99;
-    total.value = `$${totalNum.toFixed(2)}`;
-  }
-})
-
-minus0.addEventListener("click", function () {
-  
+function decrement(num,product,price) {
  
-  if (backNum !== 0) {
-    if (total.value.slice(1) ==73.99){
-      backNum -= 1
-      backpack.value = backNum;
-      //console.log(totalNum);
+  if ( values[num] !== 0) {
+    if (total.value.slice(1) ==(price+19).toFixed(2)){
+      values[num]-=1;
+      product.value =  values[num];
       totalNum =0;
       total.value = `$${totalNum}`;
     }else{
-      backNum -= 1
-      backpack.value = backNum;
-      totalNum -= 54.99;
+      values[num]-=1;
+      product.value =  values[num];
+      totalNum -= price;
       total.value = `$${totalNum.toFixed(2)}`;
     }
   }
-})
+}
 
-minus1.addEventListener("click", function () {
-  if (shoeNum !== 0) {
-    if(total.value.slice(1) ==93.99){
-      shoeNum -= 1
-      shoe.value = shoeNum;
-      totalNum =0;
-      total.value = `$${totalNum.toFixed(2)}`;
-    }else{
-      shoeNum -= 1
-      shoe.value = shoeNum;
-      totalNum -= 74.99;
-      total.value = `$${totalNum.toFixed(2)}`;
-    }
-  }
-})
+plus0.addEventListener("click",  () => increment("backNum",backpack,54.99)); 
+plus1.addEventListener("click",  () => increment("shoeNum",shoe,74.99)); 
+
+minus0.addEventListener("click",  () => decrement("backNum",backpack,54.99)); 
+minus1.addEventListener("click",  () => decrement("shoeNum",shoe,74.99)); 
