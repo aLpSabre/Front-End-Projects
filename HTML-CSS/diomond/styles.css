@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-width: 100%;
+  min-height: 100vh;
+  margin-top:10px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  background-color: aqua;
+
+}
+.container{
+  min-width: 100%;
+  min-height: 90vh;
+  margin-top: 10px;
+  text-align: center;
+}
