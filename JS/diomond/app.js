@@ -1,5 +1,50 @@
+function makeDiomond(piece){
 
-const array1 = [
+  let array=new Array(2*piece-1);
+  array.fill([]);
+  array.map((e,index,array)=>{
+    array[index]=new Array(2*piece-1)
+  })
+  
+  let count=piece-1
+
+  for (let i = 0; i < piece; i++) {
+    array[i][count] = "*"
+    if (count != 0) {
+      count--;
+    }
+  
+  }
+  for (let i = piece; i < 2*piece-1; i++) {
+    count++;
+    array[i][count] = "*"
+  }
+  for (let i = 2*piece-2; i > piece-1; i--) { 
+    array[i][count] = "*"
+    count++;
+  }
+  for (let i = piece-1; i > 0; i--) {
+  
+    array[i][count] = "*"
+    count--;
+  
+  }
+  return array;
+}
+const container=document.querySelector(".container");
+const number=document.querySelector("#number");
+console.log(number.value);
+
+number.addEventListener("input",function(){
+  let myArray=makeDiomond(Number(number.value))
+  container.innerText=""
+  myArray.forEach(e => {
+    let a = e.join("&nbsp")
+   container.innerHTML+=`<p>${a}</p>`;
+  })
+
+})
+const array = [
   ["", "", "", "", "*", "", "", "",""],
   ["", "", "", "*", "", "*", "", "",""],
   ["", "", "*", "", "", "", "*", "",""],
@@ -10,63 +55,7 @@ const array1 = [
   ["", "", "", "*", "", "*", "", "",""],
   ["", "", "", "", "*", "", "", "",""]
 ]
-array1.forEach(e=> {let a=e.join(" ") 
-  console.log(a)})
-
-/* array1.forEach(e=>e.forEach(e=>console.log(e))) */
-
-/* array1.forEach(e=> { 
-  console.log(e.length)})  */
-
-let array2 = [
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""],
-  ["", "", "", "", "", "", "", "",""]
-];
-let count = 4;
-for (let i = 0; i < 5; i++) {
-  console.log("count: ", count, "i: ", i);
-  array2[i][count] = "*"
-  if (count != 0) {
-    count--;
-  }
-
-}
-console.log(count)
-for (let i = 5; i < 9; i++) {
-  count++;
-  console.log("count: ", count, "i: ", i);
-  array2[i][count] = "*"
-
-}
-console.log(count)
-for (let i = 8; i > 4; i--) {
-
-  console.log("count: ", count, "i: ", i);
-  array2[i][count] = "*"
-  count++;
-
-}
-console.log(count)
-for (let i = 4; i > 0; i--) {
-
-
-
-  console.log("count: ", count, "i: ", i);
-  array2[i][count] = "*"
-  count--;
-
-}
-array2.forEach(e => {
-  let a = e.join(" ")
-  console.log(a)
+array.forEach(e => {
+  let a = e.join("&nbsp")
+ container.innerHTML+=`<p>${a}</p>`;
 })
-console.log(array1)
-console.log("----")
-console.log(array2)
