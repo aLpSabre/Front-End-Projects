@@ -1,0 +1,19 @@
+.carousel-item {
+  max-height: calc(100vh - 56px);
+}
+.carousel-caption{
+  bottom: 10%;
+}
+
+.carousel-item img{
+  filter: brightness(60%)
+
+}
+.fab{
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right:5px;
+}
