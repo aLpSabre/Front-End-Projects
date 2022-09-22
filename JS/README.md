@@ -2,7 +2,7 @@
 
 Javascript Workshop contains hands-on trainings and projects.
 
-- [Checkout App](./1-Checkout_Page/README.md)
+- [Checkout App](./1-Checkout_page/README.md)
 
 - [Diamond](./2-Diamond/README.md)
 
