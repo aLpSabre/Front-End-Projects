@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("./Montserrat-Regular.ttf");
+}
+
+body {
+  font-family: CustomFont;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+h2{
+  font-size: 16px;
+}
+.container {
+  min-width: 70%;
+  max-width: 80%;
+  min-height: 80vh;
+  margin: 30px auto;
+
+}
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items:flex-start;
+  gap: 2rem;
+}
+img {
+  width: 100px;
+  border-radius: 15px;
+}
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.right {
+  background-color: hsl(0, 0%, 90%);
+  padding: 1.5rem;
+  border-radius: 20px;
+  gap: 2rem;
+  justify-content: center;
+}
+input {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+label {
+  font-size: 12px;
+}
+.input-box {
+  display: flex;
+  justify-content: left;
+  align-content: left;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.wrapper {
+  border: 1px solid grey;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+#shipping-header {
+  margin-top: 20px;
+}
+.country-postcode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.5rem;
+}
+
+.select {
+  display: flex;
+  padding: 0.4rem;
+}
+select {
+  border: none;
+  outline: none;
+}
+.check {
+  flex-direction: row;
+}
+#checkbox{
+  max-width: 5%;
+}
+#continue{
+  max-width: 50%;
+  padding: 0.2rem;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.product{
+  display: flex;
+  gap:1.6rem;
+  justify-content: left;
+}
+.info{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-basis: 80%;
+  gap: 0.2rem;
+}
+.header p{
+  margin-top: 5px;
+}
+.product input{
+ width: 40%;
+ background-color: hsl(0, 0%, 90%);
+}
+.button{
+  display: flex;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 0.2rem;
+  width: 50%;
+  line-height: 3vh;
+  justify-content: space-evenly;
+  gap:1rem;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.operator{
+  background-color: rgba(172, 172, 172, 0.853);
+  width: 25%;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.remove{
+  border :none;
+  background-color: tomato;
+  border-radius: 10px;
+  width: 70px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+.shipping,.total,.subtotal,.tax,.product-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-input{
+  text-align: right;
+  background-color: hsl(0, 0%, 90%);
+  font-size: 1rem;
+}
+.product-first-price{
+  color: orange;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-right: 5px;
+}
+.shoe,.backpack{
+  text-align: center;
+  font-size: 1rem;
+}
+@media (max-width:800px) {
+  form {
+    align-items:center;
+    flex-direction: column-reverse;
+    gap:2rem;
+  }
+}

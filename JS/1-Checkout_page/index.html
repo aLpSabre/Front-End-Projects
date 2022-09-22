@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://use.fontawesome.com/4657710f5f.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Checkout Form</title>
+</head>
+
+<body>
+  <h1>Checkout Form!</h1>
+  <div class="container">
+    <form action="result.html" id="myform">
+      <div class="left">
+        <h2>Contact Information</h2>
+        <div class="email input-box">
+          <label for="email">Email:</label>
+          <div class="wrapper">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <input type="email" name="email" id="email" placeholder="Enter your Email...">
+          </div>
+        </div>
+        <div class="phone input-box">
+          <label for="tel">Phone:</label>
+          <div class="wrapper">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <input type="tel" name="tel" id="tel" placeholder="Enter your phone number...">
+          </div>
+        </div>
+        <h2 id="shipping-header">Shipping Adress</h2>
+        <div class="name input-box">
+          <label for="name">Full Name:</label>
+          <div class="wrapper">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" name="name" id="name" placeholder="Enter your name..."></input>
+          </div>
+
+        </div>
+        <div class="adress input-box">
+          <label for="adress">Adress:</label>
+          <div class="wrapper">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <input type="text" name="adress" id="adress" placeholder="Enter your adress...">
+          </div>
+        </div>
+        <div class="city input-box">
+          <label for="city">City:</label>
+          <div class="wrapper">
+            <i class="fa fa-building" aria-hidden="true"></i>
+            <input type="text" name="city" id="city" placeholder="Enter your city...">
+          </div>
+        </div>
+
+        <div class="country-postcode ">
+          <div class="country input-box">
+            <label for="country">Country:</label>
+            <div class="select wrapper">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <select name="country" id="country">
+                <option value="Germany">Germany</option>
+                <option value="Turkey">Turkey</option>
+                <option value="USA">USA</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="post-code input-box">
+            <label for="post">Post Code:</label>
+            <div class="wrapper">
+              <i class="fa fa-address-card" aria-hidden="true"></i>
+              <input type="text" name="post" id="post" placeholder="Enter your post code...">
+            </div>
+          </div>
+        </div>
+       
+          <div class="check input-box">
+            <input type="checkbox" name="checkbox" id="checkbox" form="myform">
+            <label for="checkbox">See this Information next time.</label>
+          </div>
+          <div class="submit input-box">
+            <input type="submit" value="Continue" id="continue" form="myform">
+          </div>
+       
+      </div>
+
+      <div class="right">
+        <div class="product">
+          <div class="img">
+            <img src="./img/photo1.png" alt="backpack">
+          </div>
+          <div class="info">
+            <div class="header">
+              <h2>Vintage Backpack</h2>
+              <p><span class="product-first-price">$54.99</span> <del>$94.99</del></p>
+            </div>
+            <div class="button">
+              <button class="operator minus"  type="button">-</button>
+              <input type="text" name="number-of-backpack" class="backpack" form="myform" value="0" readonly>
+              <button class="operator plus "  type="button">+</button>
+            </div>
+            <button class="remove" type="button">Remove</button>
+            <div class="product-total">
+              <p>Product Total:</p>
+              <p>$0</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="product">
+          <div class="img">
+            <img src="./img/photo2.png" alt="shoes">
+          </div>
+          <div class="info">
+            <div class="header">
+              <h2>Levi Shoes</h2>
+              <p><span class="product-first-price">$74.99</span> <del>$124.99</del></p>
+            </div>
+            <div class="button">
+              <button class="operator minus"  type="button">-</button>
+              <input type="text" name="number-of-shoe" class="shoe" form="myform" value="0" readonly>
+            
+              <button class="operator plus" type="button">+</button>
+            </div>
+            <button class="remove" type="button">Remove</button>
+            <div class="product-total">
+              <p>Product Total:</p>
+              <p>$0</p>
+            </div>
+          </div>
+         
+        </div>
+        
+        <div class="price">
+          <div class="subtotal">
+            <p>Subtotal</p>
+            <p>$0</p>
+          </div>
+          <div class="tax">
+            <p>Tax(%18)</p>
+            <p>$0</p>
+          </div>
+          <div class="shipping">
+            <p>Shipping</p>
+            <p>$0</p>
+          </div>
+          <div class="total">
+            <p>Total</p>
+            <input type="text" id="price" name="price" form="myform" class="total-input" readonly>
+          </div>
+        </div>
+        </div>
+       
+
+        </div>
+
+       
+
+    </form>
+   
+  </div>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
