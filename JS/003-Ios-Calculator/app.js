@@ -40,16 +40,32 @@ container.addEventListener("click", (e => {
           }
         })
         let string = stringArray.join("");
-        let myresult = Function("return " + string)();
-        result.innerText = myresult;
+        
+        try{
+          let myresult = Function("return " + string)();
+          result.innerText = myresult
+          check=true;
+        }
+        catch(e){
+          check = false;
+        }
       }
 
     } else {
-      let myresult = Function("return " + myArray[0])();
-      result.innerText = myresult
+      try{
+        let myresult = Function("return " + myArray[0])();
+        result.innerText = myresult
+        check=true;
+      
+      }
+      catch(e){
+        check = false;
+      }
+    
     }
-    check = true;
+    
     myArray = [];
+   
   }else if (e.target.classList.contains("box2")){
     if(result.innerHTML.includes("+")|| result.innerHTML.includes("-")){
       let plusIndex=result.innerHTML.lastIndexOf("+");
