@@ -2,16 +2,26 @@ const container = document.querySelector(".container");
 const result = document.querySelector(".result");
 
 let myArray = []
+//? To avoid equal sign to be clicked two times
 let equalClickedCheck = false;
+//? To avoid operators to be clicked two times
 let operetorCheck = false;
+
 container.addEventListener("click", (e => {
 
+  //? Numbers  
   if (e.target.classList.contains("numbers")) {
 
     document.querySelector(".result").innerText += e.target.innerText
     operetorCheck = true;
+
     if (result.innerHTML.length > 0) {
       document.querySelector(".box1").innerText = "C"
+    }
+    if (result.innerHTML.length > 13) {
+      result.style.fontSize = "1.5rem"
+    } else {
+      result.style.fontSize = "2.5rem"
     }
     if (equalClickedCheck) {
       equalClickedCheck = false;
@@ -27,7 +37,7 @@ container.addEventListener("click", (e => {
     myArray.push(document.querySelector(".result").innerText);
     let regex = /[x\%/÷]/g;
     const found = myArray[0].match(regex);
-  
+    //? Check the operations "%","x","÷"
     if (found !== null) {
       if (found.length >= 1) {
         let checkArray = [...myArray[0]];
@@ -41,19 +51,18 @@ container.addEventListener("click", (e => {
           }
         })
         myArray[0] = checkArray.join("");
-       
+        //! Calculation
         let myresult = Function("return " + myArray[0])();
         result.innerText = myresult
         equalClickedCheck = true;
       }
     } else {
+       //! Calculation
       let myresult = Function("return " + myArray[0])();
       result.innerText = myresult
       equalClickedCheck = true;
-
     }
     myArray = []
-
   }
   //? "±" sign  
   else if (e.target.classList.contains("box2")) {
@@ -66,7 +75,9 @@ container.addEventListener("click", (e => {
       array[lastIndex] = plusIndex > minusIndex ? "-" : "+";
       result.innerHTML = array.join("");
     }
-  } else if (e.target.classList.contains("box1")) {
+  }
+  //? "AC" sign 
+  else if (e.target.classList.contains("box1")) {
     result.innerHTML = "";
     operetorCheck = true;
     myArray = [];
