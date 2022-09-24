@@ -1,12 +1,17 @@
-
-//* Total price
+//* Total Price
 const total = document.querySelector(".total-input");
+total.value = `$${0}`;
+
+//* Variables
 const right=document.querySelector(".right")
 const container=document.querySelector(".container")
 const product=document.querySelector(".product")
-//* Variables
 
-total.value = `$${0}`;
+//? To check if all of the products are removed
+let removeCount=0;
+let lengthProduct=document.querySelectorAll(".product").length;
+
+
 
 right.addEventListener("click",function(e){
   if(e.target.classList.contains("plus")){
@@ -45,18 +50,20 @@ right.addEventListener("click",function(e){
       confirmButtonText: 'Remove',
       denyButtonText: `Don't remove`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
+    
       if (result.isConfirmed) {
         Swal.fire('Item is removed!', '', 'success')
         e.target.parentElement.parentElement.remove();
+        removeCount++;
         calculateTotal();
+        if(removeCount-lengthProduct==0){
+          right.textContent="You have removed all of the products..."
+        }
       } else if (result.isDenied) {
         Swal.fire('Item is not removed', '', 'info')
       }
     })
-   
   }
-
 })
 
 const calculateProduct= (btn)=>{
