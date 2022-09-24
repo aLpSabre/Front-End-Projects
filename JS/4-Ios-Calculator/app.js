@@ -18,8 +18,8 @@ container.addEventListener("click", (e => {
     if (result.innerHTML.length > 0) {
       document.querySelector(".box1").innerText = "C"
     }
-    if (result.innerHTML.length > 13) {
-      result.style.fontSize = "1.5rem"
+    if (result.innerHTML.length > 10) {
+      result.style.fontSize = "2rem"
     } else {
       result.style.fontSize = "2.5rem"
     }
