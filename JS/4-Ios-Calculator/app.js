@@ -4,8 +4,13 @@ const result = document.querySelector(".result");
 let myArray = []
 //? To avoid equal sign to be clicked two times
 let equalClickedCheck = false;
-//? To avoid operators to be clicked two times
+//? To avoid operators to be writteen two times 
 let operetorCheck = false;
+//? To check if display contains only numbers
+let numberCheck;
+function onlyNumbers(str) {
+  return /^[0-9]+$/.test(str);
+}
 
 container.addEventListener("click", (e => {
 
@@ -23,18 +28,25 @@ container.addEventListener("click", (e => {
     } else {
       result.style.fontSize = "2.5rem"
     }
-    if (equalClickedCheck) {
+     if (equalClickedCheck && !numberCheck) {
       equalClickedCheck = false;
       document.querySelector(".result").innerText = e.target.innerText
+      console.log("if");
+    } 
+  } else if (e.target.classList.contains("operator")) {
+    if(operetorCheck){
+      document.querySelector(".result").innerText = document.querySelector(".result").innerText + e.target.innerText
+      operetorCheck = false;
+      console.log("if",document.querySelector(".result").innerText);
+    }else{
+      let sub=document.querySelector(".result").innerText.substr(0,document.querySelector(".result").innerText.length-1) 
+      document.querySelector(".result").innerText=sub+e.target.innerText
     }
-  } else if (e.target.classList.contains("operator") && operetorCheck) {
-    document.querySelector(".result").innerText = document.querySelector(".result").innerText + e.target.innerText
-    equalClickedCheck = false;
-    operetorCheck = false;
-
+   
   }  //? "=" sign  
   else if (e.target.classList.contains("box19") && operetorCheck) {
     myArray.push(document.querySelector(".result").innerText);
+    numberCheck=onlyNumbers(myArray[0]);
     let regex = /[x\%/÷]/g;
     const found = myArray[0].match(regex);
     //? Check the operations "%","x","÷"
@@ -56,7 +68,7 @@ container.addEventListener("click", (e => {
         result.innerText = myresult
         equalClickedCheck = true;
       }
-    } else {
+    }  else {
        //! Calculation
       let myresult = Function("return " + myArray[0])();
       result.innerText = myresult
