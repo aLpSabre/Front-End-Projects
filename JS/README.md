@@ -20,7 +20,7 @@ Javascript Workshop contains hands-on trainings and projects.
 
 - [5-Weather-App](./5-Weather-App/README.md)
 
-- Live Site URL: [Live site URL here](https://alpsabre.github.io/Front-End-Projects/JS/4-Ios-Calculator/)
+- Live Site URL: [Live site URL here](https://alpsabre.github.io/Front-End-Projects/JS/5-Weather-App/)
 
 
 
