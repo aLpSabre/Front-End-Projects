@@ -2,22 +2,24 @@
 const weathers = document.querySelector(".weathers");
 const input = document.querySelector(".form-control")
 const submit = document.querySelector(".btn")
+const token = config.MY_API_TOKEN;
+console.log(token);
 let cityName;
 let cities = [];
 
 
 const fetchdata = (name) => {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=cfed455d0e51a873c9301547e0261e44&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${token}=metric`)
     .then((res) => {
 
       if (!res.ok) {
-        if(name.length>0){
+        if (name.length > 0) {
           renderError();
         }
-      
+
       }
       return res.json()
-    }).then((data) => renderData(data)).catch((error) => {})
+    }).then((data) => renderData(data)).catch((error) => { })
 }
 
 const renderData = (data) => {
@@ -40,9 +42,9 @@ const renderData = (data) => {
 
 const renderError = () => {
 
-    document.querySelector(".error").innerText = `${cityName} is not found`
-    document.querySelector(".error").classList.remove("invisible");
-  
+  document.querySelector(".error").innerText = `${cityName} is not found`
+  document.querySelector(".error").classList.remove("invisible");
+
 };
 
 
@@ -52,7 +54,7 @@ submit.addEventListener("click", () => {
   if (!cities.includes(cityName.toLowerCase())) {
     fetchdata(cityName);
     cities.push(cityName.toLowerCase());
-  } else if(input.value.length >0){
+  } else if (input.value.length > 0) {
     document.querySelector(".error").innerText = `${cityName} has been already added`
     document.querySelector(".error").classList.remove("invisible");
     input.value = ""
