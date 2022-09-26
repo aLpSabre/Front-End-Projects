@@ -49,7 +49,7 @@ const renderError = () => {
 submit.addEventListener("click", () => {
   cityName = input.value;
 
-  if (!cities.includes(cityName)) {
+  if (!cities.includes(cityName.toLowerCase())) {
     fetchdata(cityName);
     cities.push(cityName.toLowerCase());
   } else if(input.value.length >0){
