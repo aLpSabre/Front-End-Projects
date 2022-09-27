@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ background: linear-gradient(rgba(0, 0,0, 0.2), rgba(0, 0, 0, 0.2)),url("./glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg") no-repeat center center/cover; 
+  color: beige;
+}
+#container {
+  min-width: 60%;
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#taskContainer{
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;
+  width: 100%;
+
+}
+#taskInput{
+  flex: 4;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+#addTask{
+  flex: 1;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+button i{
+  padding: 0.8rem;
+}
+
+#addTask{  
+  background-color: green;  
+  flex: 1;
+
+}
+.task{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.check{
+ background-color: orange;
+ margin-right: 0.5rem;  
+}
+.trash{
+  background-color: red; 
+}
+.task li{
+  list-style: none;
+  color: black;
+  flex: 4;
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #fff;
+}
+.task button{
+  flex:1;
+
+}
+
+.line-through{
+  text-decoration: line-through;
+}

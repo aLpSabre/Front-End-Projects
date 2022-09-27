@@ -22,6 +22,9 @@ Javascript Workshop contains hands-on trainings and projects.
 
 - Live Site URL: [Live site URL here](https://weatherapp2535.netlify.app/)
 
+- [6-To-Do-App](./6-To-Do-App/README.md)
+
+- Live Site URL: [Live site URL here]()
 
 
 
