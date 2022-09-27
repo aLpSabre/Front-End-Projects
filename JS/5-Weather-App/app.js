@@ -3,7 +3,6 @@ const weathers = document.querySelector(".weathers");
 const input = document.querySelector(".form-control")
 const submit = document.querySelector(".btn")
 const token = config.MY_API_TOKEN;
-console.log(token);
 let cityName;
 let cities = [];
 
@@ -50,10 +49,10 @@ const renderError = () => {
 
 submit.addEventListener("click", () => {
   cityName = input.value;
-
-  if (!cities.includes(cityName.toLowerCase())) {
+console.log(cityName.toLocaleLowerCase());
+  if (!cities.includes(cityName.toLocaleLowerCase())) {
     fetchdata(cityName);
-    cities.push(cityName.toLowerCase());
+    cities.push(cityName.toLocaleLowerCase());
   } else if (input.value.length > 0) {
     document.querySelector(".error").innerText = `${cityName} has been already added`
     document.querySelector(".error").classList.remove("invisible");
@@ -69,7 +68,7 @@ submit.addEventListener("click", () => {
 weathers.addEventListener("click", (e) => {
   if (e.target.classList.contains("fa-sharp")) {
     e.target.parentElement.remove();
-    cities.splice((cities.indexOf(e.target.nextElementSibling.innerText.slice(0, e.target.nextElementSibling.innerText.length - 2))));
+    cities.splice((cities.indexOf(e.target.nextElementSibling.innerText.slice(0, e.target.nextElementSibling.innerText.length - 2).toLocaleLowerCase())));
 
   }
 })
