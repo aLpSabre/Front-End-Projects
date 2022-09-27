@@ -36,7 +36,7 @@ addTask.addEventListener("click", () => {
 })
 //? To check and delete items
 container.addEventListener("click", ((e) => {
-
+  console.log(e.target)
   if (e.target.classList.contains("fa-check") || e.target.classList.contains("check")) {
 
     e.target.parentElement.parentElement.querySelector("li").classList.toggle("line-through");
@@ -48,10 +48,20 @@ container.addEventListener("click", ((e) => {
     })
     localStorage.setItem("TODOS", JSON.stringify(todos))
 
-  } else if (e.target.classList.contains("fa-trash")) {
-    e.target.parentElement.parentElement.remove();
-    todos = todos.filter(element => element.id !== Number(e.target.parentElement.parentElement.querySelector("li").getAttribute("id")))
-    localStorage.setItem("TODOS", JSON.stringify(todos));
+  } else if (e.target.classList.contains("fa-trash")  ||  e.target.classList.contains("trash")) {
+
+    if(e.target.classList.contains("trash")){
+      e.target.parentElement.remove();
+      todos = todos.filter(element => element.id !== Number(e.target.parentElement.querySelector("li").getAttribute("id")))
+      localStorage.setItem("TODOS", JSON.stringify(todos));
+     
+    }else{
+      e.target.parentElement.parentElement.remove();
+      todos = todos.filter(element => element.id !== Number(e.target.parentElement.parentElement.querySelector("li").getAttribute("id")))
+      localStorage.setItem("TODOS", JSON.stringify(todos));
+    }
+  
+
   }
 
 
