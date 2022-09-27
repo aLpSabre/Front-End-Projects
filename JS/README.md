@@ -24,7 +24,7 @@ Javascript Workshop contains hands-on trainings and projects.
 
 - [6-To-Do-App](./6-To-Do-App/README.md)
 
-- Live Site URL: [Live site URL here]()
+- Live Site URL: [Live site URL here](https://alpsabre.github.io/Front-End-Projects/JS/6-To-Do-App/)
 
 
 
