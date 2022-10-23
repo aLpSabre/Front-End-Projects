@@ -14,14 +14,23 @@ At the end of the this project, students will be able to;
 
 - demonstrate their knowledge of algorithmic design principles for dynamic calculation of product's cart.
 
-   
 ## Problem Statement
-
-
 
 - Create a checkout page following the design and make the calculation of cart dynamically with using of DOM and Event in JS.
 
-![Form](checkout_app.gif)
+### Screenshot
+💻-Desktop-view
+<br/>
+![Desktop-view](./screenshots/desktop-view.png)
+<br/>
+📱-Mobile-view
+<br/>
+![Mobile-view](./screenshots/mobile-view.png)
+
+### Links
+
+- Solution URL: [Solution URL here](https://github.com/aLpSabre/Front-End-Projects/tree/main/JS/3-Checkout_page_with_event_capturing)
+- Live Site URL: [Live site URL here](https://alpsabre.github.io/Front-End-Projects/JS/3-Checkout_page_with_event_capturing//)
 
 ## Project Skeleton 
 
