@@ -21,11 +21,11 @@ At the end of the this project, students will be able to;
 ### Screenshot
 💻-Desktop-view
 <br/>
-![Desktop-view](./screenshots/desktop-view.png)
+![Desktop-view](./screenshots/desktop-view.gif)
 <br/>
 📱-Mobile-view
 <br/>
-![Mobile-view](./screenshots/mobile-view.png)
+![Mobile-view](./screenshots/mobile-view.gif)
 
 ### Links
 
